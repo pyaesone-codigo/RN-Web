@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {
   Image,
   ImageBackground,
+  SafeAreaView,
   ScrollView,
   StyleSheet,
   TouchableOpacity,
@@ -76,32 +77,35 @@ const DetailPage = (props: Props) => {
         style={styles.backdrop}
         blurRadius={9}
       />
-      <ScrollView contentContainerStyle={{flexGrow: 1}}>
-        {props.movie && credit ? (
-          <View style={styles.container}>
-            <View
-              style={[IS_WEB ? styles.webContainer : styles.mobileContainer]}>
-              <Image
-                style={[IS_WEB ? styles.webPoster : styles.mobilePoster]}
-                source={{
-                  uri: `${Config.IMAGE_PATH}${movie?.poster_path}`,
-                }}
-              />
-              {Detail(movie!, credit!)}
+      <SafeAreaView>
+        <ScrollView contentContainerStyle={{flexGrow: 1}}>
+          {props.movie && credit ? (
+            <View style={styles.container}>
+              <View
+                style={[IS_WEB ? styles.webContainer : styles.mobileContainer]}>
+                <Image
+                  style={[IS_WEB ? styles.webPoster : styles.mobilePoster]}
+                  source={{
+                    uri: `${Config.IMAGE_PATH}${movie?.poster_path}`,
+                  }}
+                />
+                {Detail(movie!, credit!)}
+              </View>
             </View>
-          </View>
-        ) : null}
-      </ScrollView>
-
-      <TouchableOpacity style={styles.backArrow} onPress={() => goBack(props)}>
-        <Image
-          source={require('../images/back_arrow.png')}
-          style={{
-            height: 24,
-            width: 24,
-          }}
-        />
-      </TouchableOpacity>
+          ) : null}
+        </ScrollView>
+        <TouchableOpacity
+          style={styles.backArrow}
+          onPress={() => goBack(props)}>
+          <Image
+            source={require('../images/back_arrow.png')}
+            style={{
+              height: 24,
+              width: 24,
+            }}
+          />
+        </TouchableOpacity>
+      </SafeAreaView>
     </Loader>
   );
 };
@@ -188,8 +192,8 @@ const styles = StyleSheet.create({
     height: 24,
     width: 24,
     position: 'absolute',
-    top: 16,
-    left: 16,
+    top: 40,
+    left: 24,
   },
 });
 export default connect(mapStateToProps, dispatchProps)(DetailPage);

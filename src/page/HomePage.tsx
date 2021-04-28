@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
+import {FlatList, SafeAreaView, StyleSheet, View} from 'react-native';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {BaseNavigationProps, navigate, RouteName} from '../navigation';
 import * as actions from '../features/movie/actions';
@@ -58,34 +58,36 @@ const HomePage = (props: Props) => {
   ];
 
   return (
-    <Loader loading={props.isLoading}>
-      <View style={styles.container}>
-        <Label
-          isBold={true}
-          text={'Movie'}
-          style={{
-            color: COLORS.RED,
-            alignSelf: 'center',
-            textAlign: 'center',
-            fontSize: 38,
-            paddingBottom: 24,
-          }}
-        />
-        <FlatList
-          data={category}
-          renderItem={({index, item}) => (
-            <MovieList
-              onItemPressed={movie => {
-                navigate(props, RouteName.DetailPage, movie);
-              }}
-              title={item.title}
-              movies={item.movies}
-              index={index}
-            />
-          )}
-        />
-      </View>
-    </Loader>
+    <SafeAreaView style={{flex: 1, backgroundColor: 'black'}}>
+      <Loader loading={props.isLoading}>
+        <View style={styles.container}>
+          <Label
+            isBold={true}
+            text={'Movie'}
+            style={{
+              color: COLORS.RED,
+              alignSelf: 'center',
+              textAlign: 'center',
+              fontSize: 38,
+              paddingBottom: 24,
+            }}
+          />
+          <FlatList
+            data={category}
+            renderItem={({index, item}) => (
+              <MovieList
+                onItemPressed={movie => {
+                  navigate(props, RouteName.DetailPage, movie);
+                }}
+                title={item.title}
+                movies={item.movies}
+                index={index}
+              />
+            )}
+          />
+        </View>
+      </Loader>
+    </SafeAreaView>
   );
 };
 

@@ -68,17 +68,17 @@ const DetailPage = (props: Props) => {
 
   return (
     <Loader loading={props.isLoading}>
+      <ImageBackground
+        source={{
+          uri: `${Config.IMAGE_PATH}${movie?.backdrop_path}`,
+        }}
+        resizeMode={'stretch'}
+        style={styles.backdrop}
+        blurRadius={9}
+      />
       <ScrollView contentContainerStyle={{flexGrow: 1}}>
         {props.movie && credit ? (
           <View style={styles.container}>
-            <ImageBackground
-              source={{
-                uri: `${Config.IMAGE_PATH}${movie?.backdrop_path}`,
-              }}
-              resizeMode={'stretch'}
-              style={styles.backdrop}
-              blurRadius={9}
-            />
             <View
               style={[IS_WEB ? styles.webContainer : styles.mobileContainer]}>
               <Image
@@ -92,6 +92,7 @@ const DetailPage = (props: Props) => {
           </View>
         ) : null}
       </ScrollView>
+
       <TouchableOpacity style={styles.backArrow} onPress={() => goBack(props)}>
         <Image
           source={require('../images/back_arrow.png')}
@@ -107,7 +108,7 @@ const DetailPage = (props: Props) => {
 
 const Detail = (movie: Movie, credit: Credits) => {
   return (
-    <View style={styles.detail}>
+    <View style={IS_WEB ? styles.webDetail : styles.mobileDetail}>
       <View style={{flexDirection: 'row'}}>
         <Label
           text={movie.title}
@@ -138,7 +139,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 38,
-    backgroundColor: 'black',
   },
   webPoster: {
     width: 200,
@@ -171,7 +171,12 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
 
-  detail: {
+  webDetail: {
+    paddingHorizontal: 24,
+    flex: 1,
+  },
+
+  mobileDetail: {
     flex: 1,
   },
   date: {

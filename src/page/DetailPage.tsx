@@ -172,7 +172,6 @@ const styles = StyleSheet.create({
   },
 
   detail: {
-    paddingHorizontal: 24,
     flex: 1,
   },
   date: {

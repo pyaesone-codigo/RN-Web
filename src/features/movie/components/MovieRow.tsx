@@ -41,7 +41,7 @@ const MovieRow = (props: Props) => {
       <Label text={movie.title} style={styles.title} />
       <Label text={movie.vote_average.toString()} style={styles.vote} />
       <Label
-        text={` Release date - ${moment(movie.release_date).format(
+        text={`Release date - ${moment(movie.release_date).format(
           'MMM DD YYYY',
         )}`}
         style={styles.date}

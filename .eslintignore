@@ -1,0 +1,8 @@
+build/*
+node_modules/*
+src/*
+public/*
+__test__/*
+__tests__/*
+index.native.js
+metro.config.js

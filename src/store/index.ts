@@ -1,6 +1,6 @@
 import {createStore, applyMiddleware} from 'redux';
 import {createEpicMiddleware} from 'redux-observable';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {RootAction, RootState, Services} from 'typesafe-actions';
 
 import rootReducer from './root-reducer';

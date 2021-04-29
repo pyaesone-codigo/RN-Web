@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import {FlatList, SafeAreaView, StyleSheet, View} from 'react-native';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {BaseNavigationProps, navigate, RouteName} from '../navigation';
 import * as actions from '../features/movie/actions';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {RootState} from 'typesafe-actions';
 import {connect} from 'react-redux';
 import {Label, Loader} from '../components/index';

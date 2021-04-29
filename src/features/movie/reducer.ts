@@ -8,9 +8,9 @@ import {
   fetchUpComingMoviesAsync,
 } from './actions';
 import {combineReducers} from 'redux';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {Movie, MovieListResponse} from './models/Movie';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {Credits} from './models/Credits';
 export const isLoadingTodos = createReducer(false as boolean)
   .handleAction(

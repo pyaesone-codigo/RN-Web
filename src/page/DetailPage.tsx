@@ -8,18 +8,18 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {BaseNavigationProps, goBack} from '../navigation';
 import {Config} from '../config';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {Movie} from '../features/movie/models/Movie';
 import {IS_WEB} from '../utils/UI';
 import {Label, Loader} from '../components';
 import * as actions from '../features/movie/actions';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {RootState} from 'typesafe-actions';
 import {connect} from 'react-redux';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {Credits} from '../features/movie/models/Credits';
 import Cast from '../features/movie/components/Cast';
 import Genre from '../features/movie/components/Genre';

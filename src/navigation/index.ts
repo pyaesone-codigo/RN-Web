@@ -1,6 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {NativeStackScreenProps} from 'react-native-screens/native-stack';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {RouteComponentProps} from 'react-router';
 import {IS_WEB} from '../utils/UI';
 

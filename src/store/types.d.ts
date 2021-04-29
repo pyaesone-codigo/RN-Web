@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {StateType, ActionType} from 'typesafe-actions';
 
 declare module 'typesafe-actions' {

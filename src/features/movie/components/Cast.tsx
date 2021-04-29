@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {Cast as CastModel} from '../models/Credits';
 import {FlatList, Image, View} from 'react-native';
 import {Label} from '../../../components';

@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {Movie} from '../models/Movie';
 import MovieRow from './MovieRow';
 import {Label} from '../../../components';

@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {Platform, Text, TextStyle} from 'react-native';
 
 interface Props {

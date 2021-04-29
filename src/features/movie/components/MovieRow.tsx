@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {Movie} from '../models/Movie';
 import {Image, Platform, StyleSheet} from 'react-native';
 import {Config} from '../../../config';

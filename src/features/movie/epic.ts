@@ -1,8 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {Epic} from 'redux-observable';
 import {from, of} from 'rxjs';
 import {filter, switchMap, map, catchError} from 'rxjs/operators';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {RootAction, RootState, Services, isActionOf} from 'typesafe-actions';
 import {
   fetchMovieDetailAsync,
@@ -12,9 +11,9 @@ import {
   fetchTopRatedMoviesAsync,
   fetchUpComingMoviesAsync,
 } from './actions';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {Movie} from './models/Movie';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import {Credits} from './models/Credits';
 export const loadPopularMovieEpic: Epic<
   RootAction,

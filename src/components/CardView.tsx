@@ -1,11 +1,8 @@
 import React from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {
   StyleSheet,
   TouchableOpacity,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   TouchableOpacityProps,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   ViewStyle,
 } from 'react-native';
 
